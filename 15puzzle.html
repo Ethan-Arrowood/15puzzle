@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple 15-Puzzle sliding tile puzzle game. Created by Ethan Arrowood.">
+    
+    <title>15-Puzzle</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <div id="toggle-view">
+        <h3>15-Puzzle Information</h3>
+        <span>+</span>
+        <div class="panel">
+            <p><strong>Welcome to 15-Puzzle</strong>
+                <br> Created by: Ethan Arrowood</p>
+            <div id="device_type"></div>
+            <p>The goal is to slide the tiles into the correct order shown below.</p>
+            <img src="orig.JPG" alt="Original Game Board" height="200px" width="200px">
+            <p>You can control the pieces using your finger (on a touch device), or the arrow keys on a computer.</p>
+            <p>The board checks itself automatically!
+            <br> If you want to play again, simply press 'Shuffle Puzzle'.</p>
+            
+            <p>Powered By: jQuery</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="game">
+        <button type="button" class="" onclick="generate_puzzle()">Shuffle Puzzle</button>
+        <div class="move_count">Move count: <span id="move_count">0</span></div>
+
+        <div id="user_board">
+            <h3>15 Puzzle</h3>
+            <div id="tiles_parent">
+                <div class="tile active">1</div>
+                <div class="tile active">2</div>
+                <div class="tile active">3</div>
+                <div class="tile active">4</div>
+                <div class="tile active">5</div>
+                <div class="tile active">6</div>
+                <div class="tile active">7</div>
+                <div class="tile active">8</div>
+                <div class="tile active">9</div>
+                <div class="tile active">10</div>
+                <div class="tile active">11</div>
+                <div class="tile active">12</div>
+                <div class="tile active">13</div>
+                <div class="tile active">14</div>
+                <div class="tile active" id="tile_15">15</div>
+                <div class="tile inactive">16</div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <script src="scripts.js"></script>
+</body>
+
+</html>
